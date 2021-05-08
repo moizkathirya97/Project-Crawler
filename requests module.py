@@ -19,7 +19,7 @@ Output2 = open('crawled_links.txt', 'w', encoding="utf-8")
 for Link in html_parser.find_all('a', href=True):
     Links = Link.get('href')
     if Links.startswith('/'):
-        Links = 'https:/' + domain_name_2 + Links
+        Links = 'https://' + domain_name_2 + Links
     elif Links.startswith('.'):
         Links = 'https://' + domain_name_2 + '/' + Links
     elif Links.startswith('https://'):
