@@ -21,7 +21,7 @@ for Link in html_parser.find_all('a', href=True):
     if Links.startswith('/'):
         Links = 'https:/' + domain_name_2 + Links
     elif Links.startswith('.'):
-        Links = 'https:/' + domain_name_2 + '/' + Links
+        Links = 'https://' + domain_name_2 + '/' + Links
     elif Links.startswith('https://'):
         Links
     elif Links.startswith('http://'):
