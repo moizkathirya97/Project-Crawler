@@ -22,12 +22,11 @@ for Link in html_parser.find_all('a', href=True):
         Links = 'https://' + domain_name_2 + Links
     elif Links.startswith('.'):
         Links = 'https://' + domain_name_2 + '/' + Links
-    elif Links.startswith('https://'):
-        Links
-    elif Links.startswith('http://'):
-        Links
-    elif Links.startswith('javascript:'):
-        Links
+    elif Links.startswith('https://') or Links.startswith('http://') or Links.startswith('javascript:'):
+        continue
     else:
         Links = 'https://'+ domain_name_2 + '/' + Links
     print(Links, file = Output2)
+    primary_list = list()
+    primary_list.append(Links)
+    print(primary_list)
